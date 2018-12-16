@@ -10,12 +10,19 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AlertModule } from 'ngx-bootstrap';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AngularFontAwesomeModule } from 'angular-font-awesome'
+
+//service
+import { ConexionService } from './services/conexion.service';
+import { ListaComponent } from './components/lista/lista.component';
+import { ListaAddComponent } from './components/lista-add/lista-add.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaComponent,
+    ListaAddComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     AlertModule.forRoot(),
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [ConexionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
