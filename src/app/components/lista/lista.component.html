@@ -1,3 +1,14 @@
 <div class="alert alert-warning" role="alert" *ngFor="let item of items">
   {{item.name}} {{item.id}}
+  <div class="float-right" (click)="eliminar(item)">
+    <i class="far fa-trash-alt"></i>
+  </div>
 </div>
+
+<!-- NO HE CONSEGUIDO IMPORTAR AWESOME CON NPM, ESTÁ 
+INSTALADO Y ENLAZADO TEÓRICAMENTE PERO LOS ICONOS DE
+PAPELERA NO APARECEN POR LO QUE LO ENLACÉ CON EL INDEX.HTML,
+OTROS ESTILOS AWESOME SI LOS RECONOCE CON EL ENLACE NPM, PERO
+EL ICONO DE LA PAPELERA NECESITA ENLAZAR EN LINK EN EL INDEX.HTML-->
+
+

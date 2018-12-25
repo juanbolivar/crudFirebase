@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from 'src/app/services/conexion.service';
 
+
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
@@ -10,6 +11,7 @@ export class ListaComponent implements OnInit {
   
   items:any;
 
+
   constructor(private conexion:ConexionService) { 
     this.conexion.listaItem().subscribe(item=>{
       this.items = item;
@@ -18,6 +20,10 @@ export class ListaComponent implements OnInit {
   }
     
   ngOnInit() {
+  }
+
+  eliminar(item){
+    this.conexion.eliminarItem(item);
   }
 
 }

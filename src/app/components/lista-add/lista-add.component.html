@@ -1,3 +1,10 @@
-<p>
-  lista-add works!
-</p>
+<form (ngSubmit)="agregar()">
+  <!--es de vital inportancia colocar el name por que es el
+     name que va en lista-add.ts -->
+  <input 
+  type="text" placeholder="Ingresa tu nombre" 
+  name="name" class="form-control"
+  [(ngModel)]="item.name"
+  >
+  <button class="btn-btn-warning mt-3" tupe="submit">Agregar</button>
+</form>
